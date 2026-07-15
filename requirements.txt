@@ -1,4 +1,4 @@
-herokutl==2.0.5
+git+https://github.com/nulls-brawl-site/bsod4ik-herokutl.git
 pyaes
 aiofile==3.8.1
 aiofiles==24.1.0
