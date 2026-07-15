@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 WORKDIR /data
 RUN mkdir /data/private
 
-RUN git clone https://github.com/coddrago/Heroku /data/Heroku
+RUN git clone https://github.com/nulls-brawl-site/bsod4ik-heroku /data/Heroku
 
 WORKDIR /data/Heroku
 

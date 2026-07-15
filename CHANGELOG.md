@@ -165,7 +165,7 @@
 - add some "icons" in buttons
 - remove utils.html_escape from eval
 - fix watcherbl
-- remove blacklist from ubguard.codrago.life
+- remove blacklist from ubguard.bsod4ik.xyz
 - fix config mod args when args is wrong
 - add some translation providers to translator
 - fix: replace all no-break spaces with regular ones in Evaluator
@@ -226,7 +226,7 @@
 - added structure for windows and MacOS
 - added blockquote for all lists
 - updated all banners and avatars
-- added ubguard.codrago.life
+- added ubguard.bsod4ik.xyz
 - added /profile command in inline bot
 - added restart button on "requirements installed"
 - removed cloudflare from weburl
@@ -323,10 +323,10 @@
 - Update to Hikka-TL 2.0.7
 - Allow double-restart
 - Personal messages scam modules protection
-- https://github.com/coddrago/Heroku/issues/115
-- https://github.com/coddrago/Heroku/issues/114
-- https://github.com/coddrago/Heroku/issues/119
-- https://github.com/coddrago/Heroku/issues/120
+- https://github.com/nulls-brawl-site/bsod4ik-heroku/issues/115
+- https://github.com/nulls-brawl-site/bsod4ik-heroku/issues/114
+- https://github.com/nulls-brawl-site/bsod4ik-heroku/issues/119
+- https://github.com/nulls-brawl-site/bsod4ik-heroku/issues/120
 - Other changes
 
 ## 🌑 Heroku 1.6.3

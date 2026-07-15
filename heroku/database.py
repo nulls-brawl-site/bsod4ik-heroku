@@ -6,7 +6,7 @@
 
 # ©️ Codrago, 2024-2030
 # This file is a part of Heroku Userbot
-# 🌐 https://github.com/coddrago/Heroku
+# 🌐 https://github.com/nulls-brawl-site/bsod4ik-heroku
 # You can redistribute it and/or modify it under the terms of the GNU AGPLv3
 # 🔑 https://www.gnu.org/licenses/agpl-3.0.html
 
@@ -158,7 +158,7 @@ class Database(dict):
                 description="🪐 Content related to Heroku will be here",
                 silent=True,
                 invite_bot=True,
-                avatar="https://raw.githubusercontent.com/coddrago/assets/main/heroku/heroku.png",
+                avatar="https://raw.githubusercontent.com/nulls-brawl-site/bsod4ik-assets/main/heroku/heroku.png",
                 forum=True,
                 hide_general=True,
                 _folder="heroku",

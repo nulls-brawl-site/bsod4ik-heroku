@@ -8,7 +8,7 @@
 
 # ©️ Codrago, 2024-2030
 # This file is a part of Heroku Userbot
-# 🌐 https://github.com/coddrago/Heroku
+# 🌐 https://github.com/nulls-brawl-site/bsod4ik-heroku
 # You can redistribute it and/or modify it under the terms of the GNU AGPLv3
 # 🔑 https://www.gnu.org/licenses/agpl-3.0.html
 
@@ -80,7 +80,7 @@ class LoaderMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "MODULES_REPO",
-                "https://raw.githubusercontent.com/coddrago/modules/main",
+                "https://raw.githubusercontent.com/nulls-brawl-site/bsod4ik-modules/main",
                 lambda: self.strings["repo_config_doc"],
                 validator=loader.validators.Link(),
             ),
@@ -120,7 +120,7 @@ class LoaderMod(loader.Module):
         modules = list(
             filter(
                 lambda x: not x.startswith(
-                    "https://raw.githubusercontent.com/coddrago/modules/main"
+                    "https://raw.githubusercontent.com/nulls-brawl-site/bsod4ik-modules/main"
                 ),
                 utils.array_sum(
                     map(
@@ -535,7 +535,7 @@ class LoaderMod(loader.Module):
                 "💫 <b>Joined <a"
                 f' href="https://t.me/{channel.username}">{utils.escape_html(channel.title)}</a></b>'
             ),
-            photo="https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/joined_jr.png",
+            photo="https://raw.githubusercontent.com/nulls-brawl-site/bsod4ik-assets/refs/heads/main/heroku/joined_jr.png",
         )
 
     async def install_requirements(self, requirements: list):

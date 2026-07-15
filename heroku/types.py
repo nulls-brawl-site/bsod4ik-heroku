@@ -6,7 +6,7 @@
 
 # ©️ Codrago, 2024-2030
 # This file is a part of Heroku Userbot
-# 🌐 https://github.com/coddrago/Heroku
+# 🌐 https://github.com/nulls-brawl-site/bsod4ik-heroku
 # You can redistribute it and/or modify it under the terms of the GNU AGPLv3
 # 🔑 https://www.gnu.org/licenses/agpl-3.0.html
 
@@ -344,7 +344,7 @@ class Module:
                 "✖️ <b>Declined joining <a"
                 f' href="https://t.me/{channel.username}">{utils.escape_html(channel.title)}</a></b>'
             ),
-            photo="https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/declined_jr.png",
+            photo="https://raw.githubusercontent.com/nulls-brawl-site/bsod4ik-assets/refs/heads/main/heroku/declined_jr.png",
         )
 
     async def request_join(
@@ -408,7 +408,7 @@ class Module:
 
         await self.inline.bot.send_photo(
             self.tg_id,
-            "https://raw.githubusercontent.com/coddrago/assets/refs/heads/main/heroku/join_request.png",
+            "https://raw.githubusercontent.com/nulls-brawl-site/bsod4ik-assets/refs/heads/main/heroku/join_request.png",
             caption=(
                 self._client.loader.lookup("translations")
                 .strings("requested_join")
