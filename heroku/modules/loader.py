@@ -553,6 +553,7 @@ class LoaderMod(loader.Module):
             "-q",
             "--disable-pip-version-check",
             "--no-warn-script-location",
+            *(["--break-system-packages"] if sys.version_info >= (3, 11) else []),
             *(["--user"] if need_user_flag else []),
             *requirements,
         ]
@@ -565,7 +566,16 @@ class LoaderMod(loader.Module):
                 stderr=asyncio.subprocess.PIPE,
             )
 
-            out, err = await pip.communicate()
+            try:
+                out, err = await asyncio.wait_for(pip.communicate(), timeout=60)
+            except asyncio.TimeoutError:
+                try:
+                    pip.kill()
+                except Exception:
+                    pass
+                out, err = await pip.communicate()
+                logger.error("Pip requirements install timed out after 60 seconds")
+                return False
         except Exception:
             logger.exception("Pip requirements install failed to start: %s", cmd)
             return False
@@ -580,6 +590,7 @@ class LoaderMod(loader.Module):
             return False
 
         return True
+
 
     async def install_packages(self, packages: list):
         try:

@@ -1216,17 +1216,29 @@ class Modules:
         if from_dlmod:
             try:
                 if len(inspect.signature(mod.on_dlmod).parameters) == 2:
-                    await mod.on_dlmod(self.client, self._db)
+                    await asyncio.wait_for(
+                        mod.on_dlmod(self.client, self._db),
+                        timeout=10,
+                    )
                 else:
-                    await mod.on_dlmod()
+                    await asyncio.wait_for(
+                        mod.on_dlmod(),
+                        timeout=10,
+                    )
             except Exception:
                 logger.info("Can't process `on_dlmod` hook", exc_info=True)
 
         try:
             if len(inspect.signature(mod.client_ready).parameters) == 2:
-                await mod.client_ready(self.client, self._db)
+                await asyncio.wait_for(
+                    mod.client_ready(self.client, self._db),
+                    timeout=15,
+                )
             else:
-                await mod.client_ready()
+                await asyncio.wait_for(
+                    mod.client_ready(),
+                    timeout=15,
+                )
         except SelfUnload as e:
             if no_self_unload:
                 raise e
