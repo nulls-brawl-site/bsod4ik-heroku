@@ -252,7 +252,7 @@ class InlineManager(
         self._me = self._client.tg_id
         self._name = get_display_name(self._client.heroku_me)
 
-        if not ignore_token_checks:
+        if not ignore_token_checks and not self._token:
             is_token_asserted = await self._assert_token()
             if not is_token_asserted:
                 self.init_complete = False
